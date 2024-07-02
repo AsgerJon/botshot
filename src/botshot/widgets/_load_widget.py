@@ -1,11 +1,12 @@
-"""The 'botshot.game' package provides game logic. """
+"""The LoudWidget class provides a table with entries for each shell."""
 # *************************************************************************
 #  AGPL-3.0 license                                                       *
 #  Copyright (c) 2024 Asger Jon Vistisen                                  *
 # *************************************************************************
 from __future__ import annotations
 
-from ._shell import Shell
-from ._event_type import EventType
-from ._game_event import GameEvent
-from ._load_out import LoadOut
+from ezside.widgets import BaseWidget
+
+
+class LoadWidget(BaseWidget):
+  """The LoadWidget class provides a table with entries for each shell."""

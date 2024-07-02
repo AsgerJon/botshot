@@ -1,11 +1,17 @@
-"""The 'botshot.game' package provides game logic. """
+"""Shell provides enumeration for shells covering live, blank and hidden
+shells. """
 # *************************************************************************
 #  AGPL-3.0 license                                                       *
 #  Copyright (c) 2024 Asger Jon Vistisen                                  *
 # *************************************************************************
 from __future__ import annotations
 
-from ._shell import Shell
-from ._event_type import EventType
-from ._game_event import GameEvent
-from ._load_out import LoadOut
+from vistenum import VistEnum, auto
+
+
+class Shell(VistEnum):
+  """Shell provides enumeration for shells covering live, blank and hidden
+  shells. """
+  LIVE = auto()
+  BLANK = auto()
+  HIDDEN = auto()

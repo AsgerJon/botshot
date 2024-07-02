@@ -14,7 +14,7 @@ from typing import Callable, Any, Never
 
 from vistutils.text import stringList
 
-from botshot.game import ShellState
+from botshot.game import Shell, EventType
 
 
 def tester00() -> int:
@@ -27,6 +27,13 @@ def tester00() -> int:
 
 def tester01() -> int:
   """Test of botshot game logic."""
+  for cls in [Shell, EventType, ]:
+    print(77 * '_')
+    print('Beginning of %s' % cls.__name__)
+    for item in cls:
+      print(item)
+    print('End of %s' % cls.__name__)
+    print(77 * '¨')
 
 
 def tester02() -> int:
@@ -35,15 +42,6 @@ def tester02() -> int:
   print(lol)
   print(lol * 3)
   return 0
-
-
-def tester03() -> int:
-  """Test of shell state class."""
-  for shell in ShellState:
-    if shell:
-      print('Truthy: %s' % shell)
-    else:
-      print('Falsy: %s' % shell)
 
 
 def main(*args: Callable) -> None:
@@ -73,4 +71,4 @@ def main(*args: Callable) -> None:
 
 
 if __name__ == '__main__':
-  main(tester03)
+  main(tester01)
